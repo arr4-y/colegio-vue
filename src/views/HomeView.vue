@@ -92,7 +92,7 @@ export default {
           console.error('Error al obtener datos del estudiante:', error);
           mostrarAlerta('Error al obtener datos del estudiante', 'error');
           this.cargando = false;
-        });git
+        });
     },
     eliminar(id, nombre) {
       confirmar('https://34.125.126.86/api/estudiantes', id, 'Eliminar registro', 'Realmente desea eliminar a ' + nombre + '?');
