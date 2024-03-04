@@ -84,8 +84,8 @@ export default {
   methods: {
     getEstudiantes() {
       this.cargando = true;
-      axios.get('http://localhost:8000/api/estudiantes')
-        .then(res => {
+      axios.get('https://34.16.157.105/api/estudiantes')
+         .then(res => {
           this.estudiantes = res.data;
           this.cargando = false;
         })
@@ -93,13 +93,13 @@ export default {
           console.error('Error al obtener datos del estudiante:', error);
           mostrarAlerta('Error al obtener datos del estudiante', 'error');
           this.cargando = false;
-        });
+        });git
     },
     eliminar(id, nombre) {
-      confirmar('http://localhost:8000/api/estudiantes/', id, 'Eliminar registro', 'Realmente desea eliminar a ' + nombre + '?');
+      confirmar('https://34.16.157.105/api/estudiantes', id, 'Eliminar registro', 'Realmente desea eliminar a ' + nombre + '?');
     },
     agregarEstudiante() {
-      axios.post('http://localhost:8000/api/estudiantes', this.nuevoEstudiante)
+      axios.post('https://34.16.157.105/api/estudiantes', this.nuevoEstudiante)
         .then(() => {
           mostrarAlerta('Estudiante agregado exitosamente', 'success');
           this.nuevoEstudiante = {
