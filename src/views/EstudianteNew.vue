@@ -70,7 +70,7 @@ data(){
     estudiante_telf:'',
     email:'',
     foto:'',
-    url:'http://34.125.126.86/api/estudiantes',
+    url:'https://34.125.126.86/api/estudiantes',
     cargando:false
   }
 },

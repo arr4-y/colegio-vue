@@ -1,4 +1,3 @@
-
 <template>
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
@@ -84,7 +83,7 @@ export default {
   methods: {
     getEstudiantes() {
       this.cargando = true;
-      axios.get('http://34.125.126.86/api/estudiantes')
+      axios.get('https://34.125.126.86/api/estudiantes')
          .then(res => {
           this.estudiantes = res.data;
           this.cargando = false;
@@ -96,10 +95,10 @@ export default {
         });git
     },
     eliminar(id, nombre) {
-      confirmar('http://34.125.126.86/api/estudiantes', id, 'Eliminar registro', 'Realmente desea eliminar a ' + nombre + '?');
+      confirmar('https://34.125.126.86/api/estudiantes', id, 'Eliminar registro', 'Realmente desea eliminar a ' + nombre + '?');
     },
     agregarEstudiante() {
-      axios.post('http://34.125.126.86/api/estudiantes', this.nuevoEstudiante)
+      axios.post('https://34.125.126.86/api/estudiantes', this.nuevoEstudiante)
         .then(() => {
           mostrarAlerta('Estudiante agregado exitosamente', 'success');
           this.nuevoEstudiante = {

@@ -61,7 +61,7 @@ export default {
       estudiante_dni: '',
       estudiante_telf: '',
       email: '',    
-      url: 'http://34.125.126.86/api/estudiantes',
+      url: 'https://34.125.126.86/api/estudiantes',
       cargando: false
     };
   },
