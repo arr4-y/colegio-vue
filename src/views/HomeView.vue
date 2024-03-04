@@ -98,9 +98,8 @@ export default {
           this.estudiantes = res.data;
           this.cargando = false;
         })
-        .catch(error => {
-          console.error('Error al obtener datos del estudiante:', error);
-          mostrarAlerta('Error al obtener datos del estudiante', 'error');
+        .catch(error => { 
+          mostrarAlerta('Error al obtener datos del estudiante', error);
           this.cargando = false;
         });
     },
