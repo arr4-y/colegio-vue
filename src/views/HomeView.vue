@@ -61,6 +61,16 @@
 import axios from 'axios';
 import { confirmar, mostrarAlerta } from '../funciones';
 
+// Configura la instancia de Axios para permitir solicitudes HTTP inseguras
+const instance = axios.create({
+  baseURL: 'http://34.125.126.86/api/estudiantes', // URL base de tu API HTTP
+  httpsAgent: new https.Agent({  
+    rejectUnauthorized: false // Permite solicitudes a servidores con certificados SSL no válidos
+  })
+});
+
+
+
 export default {
   data() {
     return {
