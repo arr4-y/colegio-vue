@@ -3,4 +3,4 @@ module.exports = defineConfig({
   transpileDependencies: true,
   publicPath: "/colegio-vue/"
 })
- gi
+ 
